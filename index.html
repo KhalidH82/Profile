@@ -61,7 +61,7 @@
     
 
 <!-- <img src="images/bkpic.jpg" style="height:400px;" class="z-depth-5""> -->
-<div id="about">
+<div id="about" style="display:block;">
     <p>
       I'm a dynamic full stack web developer with a passion for travel and people. My life long journey of learning and exploring allows me to connect to the world through technology. I’m confident and well versed interacting with front and back end applications which are reflected in a positive and professional manner. A unique eye and perspective when approaching problems and solving them with a creative and articulate attitude inspired by those around me.
     </p>
@@ -215,10 +215,14 @@
       <script>
 function showProjects() {
     var x = document.getElementById("projects");
-    if (x.style.display === "none") {
+    var y = document.getElementById("about");
+
+    if (x.style.display === "none" && y.style.display === "block") {
         x.style.display = "block";
+        y.style.display = "none"
     } else {
         x.style.display = "none";
+        y.style.display = "block"
     }
 }
   </script>
