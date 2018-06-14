@@ -1,9 +1,16 @@
 body {
 	font-family: 'Source Code Pro', monospace;
-background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+	background-image: -webkit-linear-gradient(bottom, #dfe9f3 0%, white 100%);
+	background-image: -o-linear-gradient(bottom, #dfe9f3 0%, white 100%);
+	background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 #about {
-
 	padding: 175px;
+}
+
+.parallax-container {
+     position: relative;
+    overflow: hidden;
+    height: 500px;
 }
