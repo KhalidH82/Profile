@@ -15,6 +15,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
 
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 
@@ -57,22 +60,12 @@
     
 
 <div id="about" style="display:block;">
-    <p>
+    <p class="animated flipInX">
       I'm a dynamic full stack web developer with a passion for travel and people. My life long journey of learning and exploring allows me to connect to the world through technology. I’m confident and well versed interacting with front and back end applications which are reflected in a positive and professional manner. A unique eye and perspective when approaching problems and solving them with a creative and articulate attitude inspired by those around me.
     </p>
 </div>
 
 
-<!-- <div class="row">
-<i class="fab fa-html5 col s2"></i>
-<i class="fab fa-node col s2"></i>
-<i class="fab fa-css3-alt col s2"></i>
-<i class="fab fa-js col s2"></i>
-<i class="fab fa-react col s2"></i>
-<i class="fab fa-git col s2"></i>
-<i class="fas fa-terminal col s2"></i>
-</div>
- -->
 
 
 <div id="projects" style="display:none;">
@@ -182,6 +175,102 @@
   </div>
 
 
+<div id="map"></div>
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: 40.7127837, lng: -74.0060};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 12, center: uluru, styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        })};
+    </script>
+      
+  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ2XGFfq_hUPvQGHV-mDpndijLQ_SoUqM&callback=initMap">
+    </script>
+
 
 
 
@@ -218,16 +307,16 @@
 
     </div>
 
-
-
-
-
       <div class="footer-copyright light-blue accent-1">
         <div class="container center-align light-blue accent-1">
           © 2018 Made By Khalid
         </div>
       </div>
     </footer>
+
+
+
+
 
       <script>
 function showProjects() {
