@@ -36,16 +36,13 @@
         <a href="http://www.khalidhosein.com" class="brand-logo">Khalid Hosein</a>
         <ul class="right">
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onclick="showLocation()">Contact</a>
           </li>
           <li>
             <a onclick="showProjects()">Projects</a>
           </li>
           <li>
             <a onclick="showSkills()">My Skills</a>
-          </li>
-          <li>
-            <a onclick="showLocation()">My Location</a>
           </li>
           <li>
             <a href="docs/resume.pdf">Resume</a>
@@ -348,26 +345,32 @@ function initMap() {
 function showProjects() {
     var project = document.getElementById("projects");
     var about = document.getElementById("about");
+    var image = document.getElementById("me")
 
-    if (project.style.display === "none" && about.style.display === "block") {
+    if (project.style.display === "none" && about.style.display === "block" && image.style.display === "block") {
         project.style.display = "block";
         about.style.display = "none"
+        image.style.display = "none"
     } else {
         project.style.display = "none";
         about.style.display = "block"
+        image.style.display = "block"
     }
 };
 
 function showSkills() {
     var skills = document.getElementById("skills");
     var about = document.getElementById("about");
+    var image = document.getElementById("me")
 
-    if (skills.style.display === "none" && about.style.display === "block") {
+    if (skills.style.display === "none" && about.style.display === "block" && image.style.display === "block") {
         skills.style.display = "block";
         about.style.display = "none"
+        image.style.display = "none"
     } else {
         skills.style.display = "none";
         about.style.display = "block"
+        image.style.display = "block"
     }
 };
 
