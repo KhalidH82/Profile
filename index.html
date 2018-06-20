@@ -29,10 +29,6 @@
 <body>
 
 
-
-
-    
-
   <div class="container">
 
     <nav>
@@ -45,9 +41,12 @@
           <li>
             <a onclick="showProjects()">Projects</a>
           </li>
-         <!--  <li>
-            <a>Photography</a>
-          </li> -->
+          <li>
+            <a onclick="showSkills()">My Skills</a>
+          </li>
+          <li>
+            <a onclick="showLocation()">My Location</a>
+          </li>
           <li>
             <a href="docs/resume.pdf">Resume</a>
           </li>
@@ -56,16 +55,43 @@
     </nav>
 
 
+<div class="row">
+<img id="me" src="images/me.jpg">
+</div>
 
     
 
 <div id="about" style="display:block;">
-    <p class="animated flipInX">
+    <p class="animated rotateIn">
       I'm a dynamic full stack web developer with a passion for travel and people. My life long journey of learning and exploring allows me to connect to the world through technology. I’m confident and well versed interacting with front and back end applications which are reflected in a positive and professional manner. A unique eye and perspective when approaching problems and solving them with a creative and articulate attitude inspired by those around me.
     </p>
 </div>
 
 
+<div id="skills" style="display:none;">
+  <ul>
+    <li class="animated slideInLeft">HTML</li>
+    <li class="animated slideInRight">CSS</li>
+    <li class="animated slideInLeft">Javascript ES6</li>
+    <li class="animated slideInRight">React.js</li>
+    <li class="animated slideInLeft">jQuery</li>
+    <li class="animated slideInRight">Bootstrap</li>
+    <li class="animated slideInLeft">Materialize</li>
+    <li class="animated slideInRight">Material UI</li>
+    <li class="animated slideInLeft">SQL</li>
+    <li class="animated slideInRight">Node.js</li>
+    <li class="animated slideInLeft">Express.js</li>
+    <li class="animated slideInRight">Ruby on Rails</li>
+    <li class="animated slideInLeft">Postgres</li>
+    <li class="animated slideInRight">SQL</li>
+    <li class="animated slideInLeft">GIT</li>
+    <li class="animated slideInRight">NPM</li>
+    <li class="animated slideInLeft">API Integration</li>
+    <li class="animated slideInRight">Heroku</li>
+    <li class="animated slideInLeft">Elixer</li>
+    <li class="animated slideInRight">Phoenix</li>
+  </ul>
+</div>
 
 
 <div id="projects" style="display:none;">
@@ -175,7 +201,7 @@
   </div>
 
 
-<div id="map"></div>
+<div id="map" style="display:none;"></div>
 <script>
 // Initialize and add the map
 function initMap() {
@@ -320,15 +346,40 @@ function initMap() {
 
       <script>
 function showProjects() {
-    var x = document.getElementById("projects");
-    var y = document.getElementById("about");
+    var project = document.getElementById("projects");
+    var about = document.getElementById("about");
 
-    if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none"
+    if (project.style.display === "none" && about.style.display === "block") {
+        project.style.display = "block";
+        about.style.display = "none"
     } else {
-        x.style.display = "none";
-        y.style.display = "block"
+        project.style.display = "none";
+        about.style.display = "block"
+    }
+};
+
+function showSkills() {
+    var skills = document.getElementById("skills");
+    var about = document.getElementById("about");
+
+    if (skills.style.display === "none" && about.style.display === "block") {
+        skills.style.display = "block";
+        about.style.display = "none"
+    } else {
+        skills.style.display = "none";
+        about.style.display = "block"
+    }
+};
+
+function showLocation() {
+    var map = document.getElementById("map")
+   
+  if (map.style.display === "none") {
+        map.style.display = "block";
+        
+    } else {
+        map.style.display = "none";
+        
     }
 };
   </script>
