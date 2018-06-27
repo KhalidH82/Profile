@@ -15,11 +15,17 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 
 
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ2XGFfq_hUPvQGHV-mDpndijLQ_SoUqM&callback=initMap">
+</script>
 
   <title>khalidhosein</title>
 
@@ -27,6 +33,9 @@
 </head>
 
 <body>
+
+
+
 
 
   <div class="container">
@@ -121,7 +130,7 @@
           </div>
           <div class="card-content">
             <span class="card-title">Travel Liason</span>
-            <p>This is a full stack application for Travel Agents to keep track of their clients information stored in clients profiles. It will allow agents to create, edit, update and delete clients profiles based on a variety of information necessary to book travel. There will also be a search page using Googles API for agents to locate hotels or restaurants in that area and suggest their recommendations to their clients. The technologies used in this project are Node.js, Express, Ejs, Javascript, SQL, CSS, and BootStrap. These technologies will utilize the MVC model within the structure of the application.</p>
+            <p>This is a full stack application for Travel Agents to keep track of their clients information stored in clients profiles. It will allow agents to create, edit, update and delete clients profiles based on a letiety of information necessary to book travel. There will also be a search page using Googles API for agents to locate hotels or restaurants in that area and suggest their recommendations to their clients. The technologies used in this project are Node.js, Express, Ejs, Javascript, SQL, CSS, and BootStrap. These technologies will utilize the MVC model within the structure of the application.</p>
           </div>
         </div>
       </div>
@@ -200,12 +209,11 @@
 
 <div id="map" style="display:none;"></div>
 <script>
-// Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: 40.7127837, lng: -74.0060};
+  let uluru = {lat: 40.7127837, lng: -74.0060};
   // The map, centered at Uluru
-  var map = new google.maps.Map(
+  let map = new google.maps.Map(
       document.getElementById('map'), {zoom: 12, center: uluru, styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -287,17 +295,9 @@ function initMap() {
             }
           ]
         })};
-    </script>
+</script>
       
-  
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ2XGFfq_hUPvQGHV-mDpndijLQ_SoUqM&callback=initMap">
-    </script>
-
-
-
-
-    <footer class="page-footer light-blue accent-1">
+<footer class="page-footer light-blue accent-1">
 
     <div id="contact" class="center-align row section scrollspy">
 
@@ -338,57 +338,9 @@ function initMap() {
     </footer>
 
 
-
-
-
-      <script>
-function showProjects() {
-    var project = document.getElementById("projects");
-    var about = document.getElementById("about");
-    var image = document.getElementById("me")
-
-    if (project.style.display === "none" && about.style.display === "block" && image.style.display === "block") {
-        project.style.display = "block";
-        about.style.display = "none"
-        image.style.display = "none"
-    } else {
-        project.style.display = "none";
-        about.style.display = "block"
-        image.style.display = "block"
-    }
-};
-
-function showSkills() {
-    var skills = document.getElementById("skills");
-    var about = document.getElementById("about");
-    var image = document.getElementById("me")
-
-    if (skills.style.display === "none" && about.style.display === "block" && image.style.display === "block") {
-        skills.style.display = "block";
-        about.style.display = "none"
-        image.style.display = "none"
-    } else {
-        skills.style.display = "none";
-        about.style.display = "block"
-        image.style.display = "block"
-    }
-};
-
-function showLocation() {
-    var map = document.getElementById("map")
-   
-  if (map.style.display === "none") {
-        map.style.display = "block";
-        
-    } else {
-        map.style.display = "none";
-        
-    }
-};
-  </script>
   </div>
 
-
+  <script src="styles/script.js"></script>
 
 </body>
 
