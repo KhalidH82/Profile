@@ -1,3 +1,4 @@
+
 function showProjects() {
     console.log("show projects")
     let project = document.getElementById("projects");
@@ -45,3 +46,4 @@ function showLocation() {
     skills.style.display = "none"
 
 };
+
